@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección de Página</title>
+</head>
+<body>
+    <script>
+        // Obtener el valor del parámetro "opcion" de la URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var opcion = urlParams.get("opcion");
+
+        // Redirigir a la página correspondiente según el valor de "opcion"
+        if (opcion === "solicitud_borrado") {
+            window.location.href = "solicitar-borrado.html";
+        } else if (opcion === "pptd") {
+            window.location.href = "pptd.html";
+        } else {
+            // Redirigir a una página por defecto o mostrar un mensaje de error
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>
+
